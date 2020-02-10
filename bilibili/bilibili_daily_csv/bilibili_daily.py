@@ -2,7 +2,7 @@ import requests
 import csv
 import lxml.html
 
-url = 'https://www.bilibili.com/ranking?spm_id_from=333.851.b_7072696d61727950616765546162.3'
+url = 'https://www.bilibili.com/ranking/'
 html = requests.get(url).content.decode()
 # print(html)
 selector = lxml.html.fromstring(html)
@@ -26,7 +26,7 @@ rows = []
 for i in range(100):
     rows.append([up_name[i],title[i],link[i]])
 
-with open(f'{time_num2}.csv','w',encoding='utf-8') as f:
+with open(f'{time_num2}.csv','w',encoding='utf-8',newline='') as f:
     f_csv = csv.writer(f)
     f_csv.writerow(headers)
     f_csv.writerows(rows)
