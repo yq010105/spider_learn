@@ -1,10 +1,11 @@
 import re
 import requests
 import os 
+import json
 
 def download(html):
     #通过正则匹配
-    pic_url = re.findall('"thumbURL":"(.*?)",',html, re.S)
+    pic_url = re.findall('"objURL":"(.*?)",',html, re.S)
     i = 1
     for key in pic_url:
         print("开始下载图片："+key +"\r\n")
@@ -12,6 +13,9 @@ def download(html):
             pic = requests.get(key, timeout=10)
         except requests.exceptions.ConnectionError:
             print('图片无法下载')
+            continue
+        except requests.exceptions.ReadTimeout:
+            print('requests.exceptions.ReadTimeout')
             continue
         #保存图片路径             
         main_path="E:/baidu/" #文件保存路径，如果不存在就会被重建
@@ -30,3 +34,5 @@ def main():
  
 if __name__ == '__main__':
         main()
+
+        
