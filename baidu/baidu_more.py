@@ -36,10 +36,10 @@ def save_pic():
                 print('requests.exceptions.ReadTimeout')
                 continue
             global search_id
-            main_path = r'E:\learn\py\git\spider\spider_learn\baidu\pic\\' + search_id +'\\'
+            main_path = patha +'/' + search_id +'/'
             if not os.path.exists(main_path):
                 os.makedirs(main_path)
-            dir = "E:\learn\py\git\spider\spider_learn\\baidu\pic\\" +search_id +'\\'+ search_id+ str(i) + '.jpg'
+            dir = main_path + search_id+ str(i) + '.jpg'
             with open(dir,'wb') as f:
                 f.write(pic.content)
             i += 1
@@ -48,13 +48,5 @@ def save_pic():
 if __name__ =='__main__':
     search_id = input('请输入要下载的内容:')
     URLS = get_urls(search_id)
+    patha = input('输入文件保存路径----示例:E:/baidu----:')
     save_pic()
-    
-    
-    # search_id = input('请输入要下载的内容:')
-    # url = get_id(search_id)
-    # print(url)
-    # obj_url = get_obj()
-    # # print(type(obj_url))
-    # print(obj_url)
-    
