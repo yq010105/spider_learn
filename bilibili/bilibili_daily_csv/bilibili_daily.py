@@ -25,8 +25,8 @@ headers = ['up_name','title','link']
 rows = []
 for i in range(100):
     rows.append([up_name[i],title[i],link[i]])
-
-with open(f'{time_num2}.csv','w',encoding='utf-8',newline='') as f:
+dir = 'E:/learn/py/git/spider/spider_learn/bilibili/bilibili_daily_csv/'+time_num2+'.csv'
+with open(dir,'w',encoding='utf-8',newline='') as f:
     f_csv = csv.writer(f)
     f_csv.writerow(headers)
     f_csv.writerows(rows)

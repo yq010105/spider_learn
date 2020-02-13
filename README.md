@@ -8,3 +8,4 @@
 ## 4、[baidu](https://github.com/yq010105/spider_learn/tree/master/baidu)：爬取百度搜索的图片
 ### baidu爬取的图片分辨率很低
 ### baidu1爬取的图片分辨率有所提高
+### baidu_auto爬取图片——面向对象
