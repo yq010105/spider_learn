@@ -1,7 +1,8 @@
-import requests
-import re
 import os
+import re
 from multiprocessing.dummy import Pool
+
+import requests
 
 
 def get_urls(search_id):
