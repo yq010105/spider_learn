@@ -16,6 +16,12 @@
 
 #### comment_wc.py ：评论区信息生成词云
 
+#### index.py : 主页的视频封面，每次刷新都会不同
+
+#### index_num.py :主站的在线人数
+
+#### up_follower: up主的粉丝数量，但最多只有250个，保存为csv文件
+
 ## 2、[dwzy](https://github.com/yq010105/spider_learn/tree/master/dwzy)：[动物庄园](https://www.kanunu8.com/book3/6879/)爬取章节并每一章保存一个 txt
 
 ## 3、[ins](https://github.com/yq010105/spider_learn/tree/master/ins)：爬取 ins 图片

@@ -3,6 +3,7 @@ import requests
 from multiprocessing.dummy import Pool
 import re
 import os
+import time
 
 av = input('请输入视频的av号:')
 p_total = input('请输入评论要几页:')
@@ -75,6 +76,10 @@ def save():
 
 
 if __name__ == '__main__':
+    start = time.time()
+    print(time.asctime(time.localtime(start)))
     save()
-    print('----已完成----', end='\t')
+    end = time.time()
+    print(time.asctime(time.localtime(end)))
+    print(f'----已完成----用了{end - start}s时间', end='\t')
     print(f'此视频已获得 {p_total} 页的评论')
